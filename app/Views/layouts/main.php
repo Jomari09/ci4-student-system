@@ -6,7 +6,6 @@
 </head>
 <body class="container mt-4">
 
-    <!-- Page Content -->
     <?= $this->renderSection('content') ?>
 
 </body>

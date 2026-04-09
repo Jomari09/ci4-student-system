@@ -45,6 +45,7 @@
     </table>
 
     <!-- Pagination -->
-<div class="mt-3">
-    <?= $pager->links() ?>
-</div>
+    <div class="mt-3">
+        <?= $pager->links('default', 'bootstrap_pager') ?>
+    </div>
+<?= $this->endSection() ?>
