@@ -9,16 +9,16 @@ class StudentController extends BaseController
     {
         $studentModel = new StudentModel();
 
-        // Search
+        // Search with pagination
         $search = $this->request->getVar('search');
         if ($search) {
             $students = $studentModel
                 ->like('name', $search)
                 ->orLike('email', $search)
                 ->orLike('course', $search)
-                ->paginate(10);
+                ->paginate(5); // show 5 per page
         } else {
-            $students = $studentModel->paginate(10);
+            $students = $studentModel->paginate(5);
         }
 
         $data = [
